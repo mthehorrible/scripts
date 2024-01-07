@@ -1,6 +1,11 @@
 #!/usr/bin/python3
 
-import urllib.request
+import requests     # Used for getting external IP
 
-external_ip = urllib.request.urlopen('https://ident.me').read().decode('utf8')
-print(f"External IP: {external_ip}")
+# Set colors
+CYAN = '\033[0;36m'
+MAGENTA = '\033[1;35m'
+
+extIp = requests.get('https://checkip.amazonaws.com').text.strip()
+
+print(f"\n{MAGENTA}External IP: {CYAN}{extIp}\n")
