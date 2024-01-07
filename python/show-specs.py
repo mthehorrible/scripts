@@ -8,6 +8,7 @@ import socket       # Used for getting hostname and internal IP
 # Set colors
 CYAN = '\033[0;36m'
 MAGENTA = '\033[1;35m'
+NC = '\033[0m' # No Color
 
 hostname = socket.gethostname()
 intIp = socket.gethostbyname(hostname)
@@ -22,10 +23,10 @@ def uptime():
 
 
 print("")
-print(f"{MAGENTA}Hostname:    {CYAN}{hostname}")
-print(f"{MAGENTA}OS:          {CYAN}{uname.system}")
-print(f"{MAGENTA}Kernel:      {CYAN}{uname.release}")
-print(f"{MAGENTA}Uptime:      {CYAN}{str(datetime.timedelta(seconds=uptime()))}")
-print(f"{MAGENTA}Internal IP: {CYAN}{intIp}")
-print(f"{MAGENTA}External IP: {CYAN}{extIp}")
+print(f"{MAGENTA}Hostname:    {CYAN}{hostname}{NC}")
+print(f"{MAGENTA}OS:          {CYAN}{uname.system}{NC}")
+print(f"{MAGENTA}Kernel:      {CYAN}{uname.release}{NC}")
+print(f"{MAGENTA}Uptime:      {CYAN}{str(datetime.timedelta(seconds=uptime()))}{NC}")
+print(f"{MAGENTA}Internal IP: {CYAN}{intIp}{NC}")
+print(f"{MAGENTA}External IP: {CYAN}{extIp}{NC}")
 print("")

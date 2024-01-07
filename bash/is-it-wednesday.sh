@@ -8,7 +8,7 @@ NC='\033[0m' # No Color
 # Get the current day of the week
 DAY=$(date +"%A")
 
-# Check if the day of the week matchs then display message
+# Check if the day of the week matches then display message
 if [ "$DAY" = "Wednesday" ]; then
     printf "${GREEN}
 It is $DAY,
