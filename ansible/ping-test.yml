@@ -1,0 +1,6 @@
+---
+- hosts: <hosts>
+  gather_facts: no
+  tasks:
+    - name: Pinging Host
+      action: ping
