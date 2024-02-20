@@ -1,0 +1,12 @@
+---
+- name: Push SSH key to machines
+  hosts: <hosts>
+  vars:
+    user: <user>
+  tasks:
+
+  - name: Push key
+    ansible.posix.authorized_key:
+      user: "{{ user }}"
+      state: present
+      key: "{{ lookup('file', lookup('env','HOME') + '/.ssh/id_ed25519.pub') }}"
