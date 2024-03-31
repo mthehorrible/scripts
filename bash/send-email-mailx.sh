@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Make sure or heirloom-mailx is installed
+# Can be replaced with s-nail
+
 # Message settings
 sender="FROM-ADDRESS"
 recipient="TO-ADDRESS"
