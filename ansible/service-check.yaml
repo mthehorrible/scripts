@@ -1,12 +1,15 @@
 ---
 - name: Check service status
-  hosts: <hosts>
+  hosts: all
+  vars:
+    service: ssh
   tasks:
 
   - name: Get Service Status
     ansible.builtin.systemd:
-      name: "<service-name>"
+      name: "{{ service }}.service"
     register: service_status
 
   - debug:
       var: service_status.status.ActiveState
+...
