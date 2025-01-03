@@ -1,0 +1,10 @@
+---
+# ansible-playbook windows/win-ping.yaml --ask-vault-pass -l test
+- name: Ping machines
+  hosts: all
+  gather_facts: false
+  vars_files:
+    'win-passwords.yaml'
+  tasks:
+    - win_ping:
+...

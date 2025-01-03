@@ -1,0 +1,13 @@
+---
+# ansible-playbook windows/win-users-disable.yaml --ask-vault-pass -l test
+- name: Make sure users are disabled
+  hosts: all
+  vars_files:
+    'win-passwords.yaml'
+  tasks:
+
+  - name: Ensure user administrator is disabled
+    ansible.windows.win_user:
+      name: administrator
+      account_disabled: true
+...
