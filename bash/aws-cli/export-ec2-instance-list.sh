@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# NOTE: This is meant to be run from CloudShell
-
 # Get date in correct format
 fDate=`date +"%F"`
 
