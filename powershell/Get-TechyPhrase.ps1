@@ -1,1 +1,0 @@
-Invoke-RestMethod -Uri "https://techy-api.vercel.app/api/text"
