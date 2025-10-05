@@ -1,8 +1,0 @@
-[local]
-localhost        ansible_connection=local
-
-[test]
-rocky1
-
-[windows]
-windows1

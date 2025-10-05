@@ -1,5 +1,0 @@
----
-ansible_user: test
-ansible_connection: winrm
-ansible_winrm_server_cert_validation: ignore
-...

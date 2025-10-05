@@ -1,7 +1,0 @@
----
-- hosts: all
-  gather_facts: no
-  tasks:
-    - name: Ping machines
-      ansible.builtin.ping:
-...
